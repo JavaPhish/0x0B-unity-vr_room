@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour
 {
-
     private Animator anim;
+
+    private bool unlocked = false;
+
+    public GameObject wait;
+
+    public void unlock()
+    {
+        unlocked = true;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +23,24 @@ public class DoorOpen : MonoBehaviour
 
     public void Interact()
     {
-        if (anim.GetBool("character_nearby") == false)
-            anim.SetBool("character_nearby", true);
+
+        if (unlocked == true)
+        {
+            if (anim.GetBool("character_nearby") == false)
+                anim.SetBool("character_nearby", true);
+            else
+                anim.SetBool("character_nearby", false);            
+        }
         else
-            anim.SetBool("character_nearby", false);
+        {
+            StartCoroutine(doorWarning());
+        }
     }
 
-
+    IEnumerator doorWarning()
+    {
+        wait.SetActive(true);
+        yield return new WaitForSeconds (5);
+        wait.SetActive(false);
+    }
 }
