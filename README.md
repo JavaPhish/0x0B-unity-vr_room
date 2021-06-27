@@ -1,7 +1,7 @@
 # A virtual reality escape room demo
 Created in Unity  2019.4.21f1 - built for Oculus platform
 
-###Download it here: https://drive.google.com/file/d/1gx0wlF3tfSDirVIzPPjCwm8YV9SqkNtS/view?usp=sharing
+### Download it here: https://drive.google.com/file/d/1gx0wlF3tfSDirVIzPPjCwm8YV9SqkNtS/view?usp=sharing
 
 ## Gameplay Description (Spoilers!)
 Players must turn on the projector to complete the game, however they must figure out how to get into the projector room and even figure out how to turn it on once there.
